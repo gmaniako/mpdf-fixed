@@ -39,5 +39,6 @@
             "php -r \"chmod('./tmp', 0777);\"",
             "php -r \"chmod('./graph_cache', 0777);\""
         ]
-    }
+    },
+    "minimum-stability": "dev"
 }
