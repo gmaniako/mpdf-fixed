@@ -2431,6 +2431,11 @@ class Tag
 						if (isset($attr['ERROR'])) {
 							$objattr['errorlevel'] = $attr['ERROR'];
 						}
+
+						$objattr['disableborder'] = false;
+						if ( isset($attr['DISABLEBORDER']) )
+							$objattr['disableborder'] = (bool) $attr['DISABLEBORDER'];
+
 					} else if ($objattr['btype'] == 'IMB' || $objattr['btype'] == 'RM4SCC' || $objattr['btype'] == 'KIX' || $objattr['btype'] == 'POSTNET' || $objattr['btype'] == 'PLANET') {
 						$arrcode = $this->mpdf->barcode->getBarcodeArray($objattr['code'], $objattr['btype']);
 						if ($arrcode === false) {
